@@ -1,38 +1,55 @@
-/* Global Styles */
+html,
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  /* Main Content Styles */
-  main {
-    padding: 20px;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .column {
-    background-color: #eee;
-    padding: 20px;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "sidebar footer";
+  grid-gap: 1rem;
+}
+
+header {
+  align-content: center;
+  grid-area: header;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+
+aside {
+  grid-row: sidebar;
+}
+
+footer {
+  grid-column: footer;
+}
+
+aside,
+main {
+ grid-gap: 1rem;
+  min-height: 300px;
+}
+
+body {
+  background: #fafafa;
+  line-height: 1.5;
+  font-family: 'Arial';
+  padding: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
