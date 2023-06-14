@@ -6,28 +6,31 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="wrapper">
-      <header>My Blog</header>
+  <div class="wrapper">
+    <header class="title">My Blog</header>
       <aside>
+        <h3>Nav</h3>
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Link One</a></li>
+            <li><a href="#">Link Two</a></li>
           </ul>
         </nav>
+        <div class="sidebar-buttons">
+          <button class="button">Share</button>
+          <button class="button">Subscribe</button>
       </aside>
       <main>
-        <div class="item featured">
-          <h3>Featured Article</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna nisi. Mauris maximus urna et justo vestibulum, nec dictum ipsum tristique.</p>
-        </div>
-        <div class="item item-2">
+        <div class="non-featured">
           <h3>Article Two</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna nisi. Mauris maximus urna et justo vestibulum, nec dictum ipsum tristique.</p>
         </div>
-        <div class="item item-3">
+        <a href="/blog/page2.html"><div id="featured">
+          <h3>Featured Article</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna nisi. Mauris maximus urna et justo vestibulum, nec dictum ipsum tristique.</p>
+        </div></a>
+        <div class="non-featured">
           <h3>Article Three</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed magna nisi. Mauris maximus urna et justo vestibulum, nec dictum ipsum tristique.</p>
         </div>

@@ -1,55 +1,75 @@
-html,
 body {
-  height: 100%;
   margin: 0;
-}
-
-.wrapper {
-  min-height: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-areas:
-    "header header"
-    "sidebar main"
-    "sidebar footer";
-  grid-gap: 1rem;
-}
-
-header {
-  align-content: center;
-  grid-area: header;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
-
-aside {
-  grid-row: sidebar;
-}
-
-footer {
-  grid-column: footer;
-}
-
-aside,
-main {
- grid-gap: 1rem;
-  min-height: 300px;
-}
-
-body {
   background: #fafafa;
   line-height: 1.5;
   font-family: 'Arial';
   padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  background-image: url('your-image-url.jpg'); /* Add the URL of your background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "nav header"
+    "sidebar main"
+    "sidebar footer";
+  grid-gap: 1rem;
+  flex-grow: 1; /* Allow the wrapper to grow and fill available vertical space */
+}
+
+header {
+  grid-area: header;
+  align-content: center;
+  margin-bottom: 1rem; /* Add margin-bottom to create spacing */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2.37fr 1fr;
+  grid-gap: 1rem;
+  min-height: 0; /* Set minimum height to enable vertical content overflow */
+  grid-area: main;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  max-height: 10%;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+ul {
+  list-style: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+#featured {
+  border: solid darkgrey;
+  background-color: rgb(196, 198, 200);
+  padding: 5%;
+  min-height: 100%;
+}
+
+.title {
+  font-size: 250%;
+}
+
+.non-featured {
+  border: 1px solid darkgrey;
+  margin: 5%;
+  padding: 10%;
 }
