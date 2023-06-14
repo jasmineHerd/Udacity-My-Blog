@@ -1,16 +1,16 @@
 body {
   margin: 0;
-  background: #fafafa;
   line-height: 1.5;
   font-family: 'Arial';
   padding: 4rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Set minimum height to full viewport height */
-  background-image: url('your-image-url.jpg'); /* Add the URL of your background image */
+  min-height: 100vh;
+  background-image: url('/Users/jasmine/FEND/1/MiligramBlog/images/aesthetic-botanical-leaves-plants-vector-yztrp30cyybt6ono.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -21,24 +21,26 @@ body {
     "sidebar main"
     "sidebar footer";
   grid-gap: 1rem;
-  flex-grow: 1; /* Allow the wrapper to grow and fill available vertical space */
+  flex-grow: 1;
+  padding: 1rem;
 }
 
 header {
   grid-area: header;
   align-content: center;
-  margin-bottom: 1rem; /* Add margin-bottom to create spacing */
+  margin-bottom: 1rem;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 2.37fr 1fr;
   grid-gap: 1rem;
-  min-height: 0; /* Set minimum height to enable vertical content overflow */
+  min-height: 0;
   grid-area: main;
 }
 
 aside {
+  font: 1.5em sans-serif;
   grid-area: sidebar;
 }
 
@@ -46,7 +48,7 @@ footer {
   grid-area: footer;
   display: grid;
   max-height: 10%;
-  margin-top: auto; /* Push the footer to the bottom */
+  margin-top: auto;
 }
 
 ul {
@@ -59,7 +61,8 @@ ul {
 
 #featured {
   border: solid darkgrey;
-  background-color: rgb(196, 198, 200);
+  background-color: rgba(124, 176, 129, 0.5);
+  color: white;
   padding: 5%;
   min-height: 100%;
 }
@@ -72,4 +75,33 @@ ul {
   border: 1px solid darkgrey;
   margin: 5%;
   padding: 10%;
+}
+
+#button {
+  background-color: rgb(124, 176, 129);
+  border-color: darkgray;
+}
+
+#navi a:link {
+  color: rgb(124, 176, 129);
+}
+
+#navi a:visited {
+  color: rgb(124, 176, 129);
+}
+
+#navi a:hover {
+  color: rgb(124, 176, 129);
+  background-color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-areas:
+      "hd hd"
+      "sb main"
+      "footer";
+    grid-template-columns: 200px 1fr;
+    margin: 20px auto;
+  }
 }
